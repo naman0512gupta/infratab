@@ -1,0 +1,55 @@
+ @media screen and (max-width:1023px){
+            .container{
+                width:50%;
+                margin:0 25%;
+            }
+            .chart_container{
+                width:100%;
+                margin:0;
+            }
+        }
+        @media screen and (max-width:425px){
+            .container,.chart_container{
+                width:80%;
+                margin:0 10%;
+            }
+        }
+        @media screen and (max-width:320px){
+            .container,.chart_container{
+                width:100%;
+                margin:0;
+            }
+            
+        }
+body{
+   font-family:Roboto; 
+}
+.container{
+    display:inline-block;width: 25%;box-shadow:1px 1px 2px rgba(0,0,0,0.2);float: left;background-color: #ecf0f1;
+}
+.title{
+    text-align:center;display:block;background-color: #d35400;font-size:20px;color: white;padding: 2%;
+}
+.dropdown_container{
+    display:block;padding: 3%;
+}
+.dropdown_label{
+    display:block;font-size: 12px;padding-left: 20px;color: #2980b9;
+}
+.dropdown i{
+    color: #2980b9;
+}
+.dropdown1,.dropdown2{
+    border: 0;border-bottom: 2px solid #2980b9;width: 90%;font-weight: 300;font-size: 18px;color: #464a4a;background-color: transparent;
+}
+.common_trends p{
+    padding: 0px 5%;
+}
+#trends span{
+            display: block;
+    color: #2980b9;
+    padding: 2%;
+        }
+.chart_container{
+    display:inline-block;width:75%;
+}

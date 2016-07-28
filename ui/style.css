@@ -1,0 +1,504 @@
+body {
+    margin: 0;
+    background-color: #ecf0f1;
+    font-family: Ubuntu;
+}
+.topbar {
+    background-color: #1abc9c;
+    height: 63px;
+}
+.topbar img {
+    padding: 0;
+    margin: 0;
+    background-color: #34495e;
+    width: 100px;
+    height: 63px;
+}
+.dropdown {
+    display: inline;
+    position: relative;
+    float: right;
+    margin-right: 1%;
+}
+.dropdown .dropdownbtn {
+    border: 0;
+    background: none;
+    color: white;
+    font-size: 16px;
+    padding: 22px;
+    text-align: center;
+}
+.dropdownbtn i{
+    color:white;
+}
+.dropdown .dropdown_content {
+    position: absolute;
+    right: 1%;
+    background: white;
+    padding: 8px;
+    border: 1px solid #3498db;
+    margin-top: 7%;
+    width: 160px;
+    max-width: 160px;
+    z-index: 1;
+    display: none;
+}
+.dropdown_content .dropdown_arrow {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    transform: rotate(45deg);
+    background-color: white;
+    right: 10%;
+    top: -2px;
+}
+.dropdown_content .content_logo {
+    position: relative;
+    border-radius: 50%;
+    background-color: #d35400;
+    color: white;
+    font-weight: 400;
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    padding: 4%;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+.content_logo .online {
+    position: absolute;
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #2ecc71;
+    top: 0;
+    right: 1px;
+}
+.dropdown_content .content_name {
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+    margin-left: 2%;
+}
+.content_name a {
+    font-size: 12px;
+    color: #3498db;
+    text-decoration: none;
+}
+.dropdown:hover .dropdown_content {
+    display: block;
+}
+.dropdown:hover .dropdownbtn {
+    background-color: #16a085;
+}
+.menubar {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: block;
+    height: 70px;
+    background-color: #2c3e50;
+}
+.menubar p {
+    font-size: 20px;
+    padding: 23px;
+    display: inline-block;
+    margin: 0;
+    color: white;
+}
+.container {
+    position: absolute;
+    width: 100%;
+    margin-top: 70px;
+    height: 100%;
+}
+.container .sidebar {
+    position: absolute;
+    height: 100%;
+    background-color: #34495e;
+    width: 100px;
+}
+.sidebar .menu_item {
+    position: relative;
+    padding: 20px 0;
+    margin: 0;
+    text-align: center;
+}
+.menu_item .active_item_highlighter {
+    position: absolute;
+    display: none;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #ecf0f1;
+    right: -5px;
+    top: 30px;
+}
+.menu_item a {
+    display: inline-block;
+}
+.menu_item a i {
+    width: 30px;
+    height: 30px;
+    color: #ecf0f1;
+}
+.container .content {
+    text-align: center;
+    padding-left: 100px;
+    color: #2c3e50;
+}
+.progress_animation p {
+    font-size: 30px;
+    margin: 0;
+    padding: 115px;
+    font-weight: 300;
+}
+.progress_animation .diagram_container {
+    padding: 0 3% 265px 3%;
+    position: relative;
+    height: 100px;
+}
+.diagram_container .diagram{
+    position:relative;
+}
+.diagram_container .anim_line {
+    position: absolute;
+    display: inline-block;
+    height: 3px;
+    content: '';
+    width: 100%;
+    background-color: #2c3e50;
+    top: 50px;
+    left: 0;
+    z-index: -1;
+}
+.anim_line span {
+    position: absolute;
+    display: inline-block;
+    height: 4px;
+    width: 50%;
+    left: 0;
+    animation: fillbar 1s 2s forwards, fillbar2 1s 5s forwards;
+}
+.diagram_container .icon_container {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #2c3e50;
+    background-color: #ecf0f1;
+    animation: bouncein 1s forwards;
+}
+.icon_container.circle1{
+    float:left;
+}
+.icon_container.circle2{
+    animation-delay:3s;
+}
+.icon_container.circle3{
+    float:right;animation-delay:6s;
+}
+.diagram_container .icon_container i {
+    margin: 25px;
+}
+@keyframes bouncein {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+        background-color: #f39c12;
+        color: white;
+        border: 1px solid #f39c12;
+    }
+    100% {
+        transform: scale(1);
+        background-color: #f39c12;
+        color: white;
+        border: 1px solid #f39c12;
+    }
+}
+@keyframes fillbar {
+    0% {
+        width: 0;
+        background-color: #2c3e50;
+    }
+    100% {
+        width: 50%;
+        background-color: #f39c12;
+        opactiy: 1;
+    }
+}
+@keyframes fillbar2 {
+    0% {
+        width: 50%;
+        background-color: #f39c12;
+    }
+    100% {
+        width: 100%;
+        background-color: #f39c12;
+        opactiy: 1;
+    }
+}
+.toggle_switch .title1 {
+    font-size: 30px;
+    margin: 0;
+    font-weight: 300;
+    padding: 100px 0 50px 0;
+}
+.toggle_switch .title2 {
+    font-size: 30px;
+    margin: 0;
+    font-weight: 300;
+    padding: 75px 0 0 0;
+}
+.toggle_switch .switch p {
+    position: relative;
+    margin: 0;
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #1abc9c;
+    cursor: pointer;
+}
+.switch p .deg_f {
+    float: left;
+    color: white;
+    padding: 6% 15%;
+}
+.switch p .btn {
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 24px;
+    margin: 3px 0;
+    background-color: #2c3e50;
+    left: 5%;
+}
+.switch p .deg_c {
+    float: right;
+    color: white;
+    padding: 6% 15%;
+}
+@keyframes toggle {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(40px, 0);
+    }
+}
+@keyframes togglerev {
+    0% {
+        transform: translate(40px, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+.btn {
+    animation: toggle 1s ease-in-out forwards;
+}
+.toggled {
+    animation: togglerev 1s ease-in-out forwards;
+}
+.toggle_switch .buttongrp {
+    position: relative;
+    padding: 5%;
+}
+.buttongrp .line {
+    position: relative;
+}
+.buttongrp .line .fullline {
+    position: absolute;
+    height: 3px;
+    display: inline-block;
+    width: 100%;
+    background-color: transparent;
+    left: 0;
+    top: 25px;
+    z-index: -1;
+}
+.fullline .part1 {
+    position: absolute;
+    height: 3px;
+    display: inline-block;
+    width: 25%;
+    background-color: #f39c12;
+    left: 0;
+}
+.fullline .part2 {
+    position: absolute;
+    height: 3px;
+    display: inline-block;
+    width: 25%;
+    background-color: #1abc9c;
+    left: 25%;
+}
+.fullline .part3 {
+    position: absolute;
+    height: 3px;
+    display: inline-block;
+    width: 25%;
+    background-color: #3498db;
+    left: 50%;
+}
+.fullline .part4 {
+    position: absolute;
+    display: inline-block;
+    width: 25%;
+    border: 1px dotted black;
+    left: 75%;
+}
+.buttongrp .circle_grp {
+    position: relative;
+    height: 50px;
+}
+.circle_grp .c1 {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #f39c12;
+    float: left;
+}
+.circle_grp .c2 {
+    position: absolute;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #a2f9f6;
+    left: 25%;
+}
+.circle_grp .c3 {
+    position: absolute;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #1abc9c;
+    left: 50%;
+}
+.circle_grp .c4 {
+    position: absolute;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #3498db;
+    left: 75%;
+}
+.circle_grp .c5 {
+    position: absolute;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #ecf0f1;
+    border: 1px dotted;
+    left: 98%;
+}
+.circle_grp .c5 span {
+    height: 25px;
+    width: 25px;
+    display: none;
+    border-radius: 50%;
+    background-color: #34495e;
+    margin-top: 25%;
+}
+@keyframes circlehover {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
+.c1:hover {
+    animation: circlehover 1s forwards;
+}
+.c2:hover {
+    animation: circlehover 1s forwards;
+}
+.c3:hover {
+    animation: circlehover 1s forwards;
+}
+.c4:hover {
+    animation: circlehover 1s forwards;
+}
+@keyframes circlehover2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+        border: 1px solid #34495e;
+    }
+}
+.c5:hover {
+    animation: circlehover2 1s forwards;
+}
+.checklist p {
+    font-size: 30px;
+    margin: 0;
+    padding: 100px 0 50px 0;
+    font-weight: 300;
+}
+.checklist .box {
+    background-color: white;
+    border-radius: 10px;
+    width: 60%;
+    display: inline-block;
+    text-align: left;
+    padding: 1%;
+}
+.box .row {
+    border-bottom: 1px solid #bdc3c7;
+}
+.row #item1 {
+    display: inline-block;
+    width: 63%;
+    vertical-align: top;
+    padding: 2%;
+}
+.row #item1 #text {
+    display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+}
+.row #item1 #icon {
+    float: right;
+}
+.row #item2,
+.row #item3,
+.row #item3,
+.row #item4 {
+    display: inline-block;
+    padding: 2%;
+}
+#item1:hover,
+#item2:hover,
+#item3:hover,
+#item4:hover,
+#item5:hover {
+    background-color: #1abc9c;
+    color: white;
+}
+.check_active,
+.check_active #item1 {
+    color: #f39c12 !important;
+}
+#p_anim,
+#t_sw,
+#c_list {
+    display: none;
+}
+#p_anim:target,
+#t_sw:target,
+#c_list:target {
+    display: block;
+}
